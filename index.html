@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>흥국 마라톤 - 제22회 새벽강변 국제마라톤대회 초대장</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8f8f8;
+            color: #1a1a1a;
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        
+        .header {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        
+        .header .subtitle {
+            font-size: 1em;
+            opacity: 0.8;
+            margin-top: 8px;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 50px 40px;
+        }
+        
+        .greeting {
+            text-align: center;
+            font-size: 1em;
+            margin-bottom: 50px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .section {
+            margin: 35px 0;
+            padding: 30px;
+            background: #fafafa;
+            border-left: 3px solid #1a1a1a;
+        }
+        
+        .section h2 {
+            color: #1a1a1a;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+        }
+        
+        .info-row {
+            display: flex;
+            padding: 10px 0;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            min-width: 120px;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .info-value {
+            flex: 1;
+            color: #555;
+        }
+        
+        .info-value a {
+            color: #1a1a1a;
+            text-decoration: underline;
+        }
+        
+        .info-value a:hover {
+            opacity: 0.7;
+        }
+        
+        .highlight-box {
+            background: #1a1a1a;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin: 35px 0;
+        }
+        
+        .highlight-box h3 {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .highlight-box p {
+            font-size: 1em;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+        
+        .course-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .course-card {
+            background: white;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .course-card h4 {
+            color: #1a1a1a;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .prize-item {
+            padding: 8px 0;
+            font-size: 0.95em;
+            color: #555;
+            border-bottom: 1px dashed #e8e8e8;
+        }
+        
+        .prize-item:last-child {
+            border-bottom: none;
+        }
+        
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .event-card {
+            background: white;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .event-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .event-card ul {
+            list-style: none;
+        }
+        
+        .event-card ul li {
+            padding: 6px 0;
+            font-size: 0.95em;
+            color: #555;
+            padding-left: 12px;
+            position: relative;
+        }
+        
+        .event-card ul li:before {
+            content: '·';
+            position: absolute;
+            left: 0;
+        }
+        
+        .note {
+            margin-top: 20px;
+            padding: 15px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            font-size: 0.9em;
+            line-height: 1.7;
+            color: #666;
+        }
+        
+        .footer {
+            background: #f5f5f5;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .footer p {
+            margin: 8px 0;
+            font-size: 0.95em;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+            }
+            
+            .header {
+                padding: 40px 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.5em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .info-row {
+                flex-direction: column;
+            }
+            
+            .info-label {
+                margin-bottom: 5px;
+                font-weight: 600;
+            }
+            
+            .course-container,
+            .event-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>제22회 새벽강변 국제마라톤대회</h1>
+            <div class="subtitle">흥국생명 직원 및 가족 초대</div>
+        </div>
+        
+        <div class="content">
+            <div class="greeting">
+                안녕하십니까,<br>
+                직원 여러분과 가족분들을 제22회 새벽강변 국제마라톤대회에 초대합니다.<br>
+                함께 달리며 건강과 즐거움을 나누는 뜻깊은 시간이 되시길 바랍니다.
+            </div>
+            
+            <div class="highlight-box">
+                <h3>대회 일시 및 장소</h3>
+                <p>
+                    2025년 6월 1일 (일) 오전 7시 출발<br>
+                    상암동 월드컵공원 평화의광장
+                </p>
+            </div>
+            
+            <div class="section">
+                <h2>집결 장소 안내</h2>
+                <div class="info-row">
+                    <div class="info-label">집결 시간</div>
+                    <div class="info-value">오전 6시 30분까지</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">집결 장소</div>
+                    <div class="info-value">
+                        <a href="https://map.naver.com/p/search/상암동%20월드컵공원%20평화의광장" target="_blank">
+                            상암동 월드컵공원 평화의광장
+                        </a>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">대중교통</div>
+                    <div class="info-value">지하철 6호선 월드컵경기장역 1번 출구 (도보 10분)</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">문의</div>
+                    <div class="info-value">인사팀 (내선: 1234)</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>주차 안내</h2>
+                <div class="info-row">
+                    <div class="info-label">주차장</div>
+                    <div class="info-value">
+                        <a href="https://map.naver.com/p/search/월드컵공원%20주차장" target="_blank">
+                            월드컵공원 제1, 제2 주차장
+                        </a>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">주차비</div>
+                    <div class="info-value">무료 (대회 당일 한정)</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">주차 시간</div>
+                    <div class="info-value">오전 5시 30분부터 입장 가능</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">유의사항</div>
+                    <div class="info-value">주차 공간이 제한되어 있으니 대중교통 이용을 권장합니다</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>코스별 순위 시상 (회사 자체)</h2>
+                <p style="margin-bottom: 20px; color: #666; font-size: 0.95em;">
+                    ※ 대회 공식 시상과는 별도로 우리 회사 참가자를 위한 특별 시상
+                </p>
+                
+                <div class="course-container">
+                    <div class="course-card">
+                        <h4>하프코스</h4>
+                        <div class="prize-item">1등 : 50만원</div>
+                        <div class="prize-item">2등 : 30만원</div>
+                        <div class="prize-item">3등 : 20만원</div>
+                        <div class="prize-item">4-5등 : 10만원</div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <h4>10km</h4>
+                        <div class="prize-item">1등 : 30만원</div>
+                        <div class="prize-item">2등 : 20만원</div>
+                        <div class="prize-item">3등 : 15만원</div>
+                        <div class="prize-item">4-5등 : 5만원</div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <h4>5km</h4>
+                        <div class="prize-item">1등 : 20만원</div>
+                        <div class="prize-item">2등 : 15만원</div>
+                        <div class="prize-item">3등 : 10만원</div>
+                        <div class="prize-item">완주자 : 기념품</div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <h4>커플런 / 패밀리런</h4>
+                        <div class="prize-item">1등 : 40만원</div>
+                        <div class="prize-item">2등 : 30만원</div>
+                        <div class="prize-item">3등 : 20만원</div>
+                        <div class="prize-item">완주팀 : 기념품</div>
+                    </div>
+                </div>
+                
+                <div class="note">
+                    <strong>시상 기준</strong> : 네트타임 기준 (칩 기록)<br>
+                    <strong>시상 일정</strong> : 대회 종료 후 회사 행사에서 별도 시상<br>
+                    <strong>참가 확인</strong> : 출발 전 회사 부스에서 참가 등록 필수
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>특별 미니 이벤트</h2>
+                <p style="margin-bottom: 20px; color: #666; font-size: 0.95em;">
+                    대회를 더욱 즐겁게! 다양한 이벤트에 참여하세요
+                </p>
+                
+                <div class="event-grid">
+                    <div class="event-card">
+                        <h3>럭키드로우</h3>
+                        <ul>
+                            <li>완주자 전원 추첨</li>
+                            <li>1등 에어프라이어</li>
+                            <li>2등 블루투스 이어폰</li>
+                            <li>3등 커피 쿠폰 (10명)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="event-card">
+                        <h3>포토존 이벤트</h3>
+                        <ul>
+                            <li>회사 로고 포토존</li>
+                            <li>SNS 업로드 참여자</li>
+                            <li>추첨 커피 쿠폰 증정</li>
+                            <li>총 30명 선정</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="event-card">
+                        <h3>가족 단체상</h3>
+                        <ul>
+                            <li>3인 이상 가족 참가</li>
+                            <li>전원 완주 시 상품권</li>
+                            <li>가족사진 촬영 서비스</li>
+                            <li>특별 기념품 제공</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="event-card">
+                        <h3>응원 부스</h3>
+                        <ul>
+                            <li>간식·음료 무료 제공</li>
+                            <li>완주 식사 쿠폰</li>
+                            <li>피로회복 간식 박스</li>
+                            <li>응원 메시지 이벤트</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>참가 유의사항</h2>
+                <div class="info-row">
+                    <div class="info-label">신청 마감</div>
+                    <div class="info-value">2025년 5월 20일 (화) 16:00까지</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">신청 방법</div>
+                    <div class="info-value">사내 그룹웨어 공지사항에서 신청서 작성</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">준비물</div>
+                    <div class="info-value">운동복, 운동화, 개인 물통, 간식</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">기념품</div>
+                    <div class="info-value">대회 티셔츠, 배번호, 완주메달, 안내책자</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">보험</div>
+                    <div class="info-value">대회 주최측 단체 보험 가입 (무료)</div>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>건강한 도전, 즐거운 추억</h3>
+                <p>
+                    많은 직원분들과 가족분들의 참여를 기다립니다<br>
+                    함께 달리며 건강과 행복을 나누는 시간이 되길 바랍니다
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>주최</strong> 세계평화마라톤협회, 한국마라톤협회</p>
+            <p><strong>후원</strong> 흥국생명보험주식회사</p>
+            <p style="margin-top: 20px
